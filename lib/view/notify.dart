@@ -13,7 +13,7 @@ class _NotifyState extends State<Notify> {
     return Container(
       color: Colors.blueGrey,
       alignment: Alignment.center,
-      child: const Text('Home'),
+      child: const Text('Notify'),
     );
   }
 }

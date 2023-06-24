@@ -13,7 +13,7 @@ class _SpaceState extends State<Space> {
     return Container(
       color: Colors.blueGrey,
       alignment: Alignment.center,
-      child: const Text('Home'),
+      child: const Text('Space'),
     );
   }
 }

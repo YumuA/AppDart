@@ -11,7 +11,6 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   final TextEditingController _namectl = TextEditingController();
   final TextEditingController _passctl = TextEditingController();
-  String _username = '';
 
   @override
   Widget build(BuildContext context) {
@@ -20,29 +19,30 @@ class _LoginState extends State<Login> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          CircleAvatar(
+          const CircleAvatar(
             radius: 80,
             backgroundImage: AssetImage('assets/img/bocchi_user.jpg'),
           ),
           Padding(
             padding: const EdgeInsets.all(12.0),
-            child: Container(
+            child: SizedBox(
               width: 250,
               child: TextFormField(
                 controller: _namectl,
                 decoration: const InputDecoration(
                   border: UnderlineInputBorder(),
-                  labelText: 'Enter your Username',
+                  labelText: 'Ingresa tu usuario',
                 ),
               ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(12.0),
-            child: Container(
+            child: SizedBox(
               width: 250,
               child: TextFormField(
                 controller: _passctl,
+                obscureText: true,
                 decoration: const InputDecoration(
                   border: UnderlineInputBorder(),
                   labelText: 'Ingresa tu contraseña',
@@ -57,7 +57,6 @@ class _LoginState extends State<Login> {
             ),
             onPressed: () {
               setState(() {
-                _username = _namectl.text.toString();
               });
               Navigator.of(context).push(MaterialPageRoute(
                 builder: (_) => RootPage(

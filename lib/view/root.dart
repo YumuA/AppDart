@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gitpaste/view/login.dart';
+import 'package:gitpaste/view/home.dart';
 import 'package:gitpaste/view/notify.dart';
 import 'package:gitpaste/view/profile.dart';
 import 'package:gitpaste/view/search.dart';
@@ -65,10 +65,11 @@ class _RootPageState extends State<RootPage> {
       body: IndexedStack(
         index: currentPageIndex,
         children: [
-          Login(),
-          Search(),
-          Space(),
-          Notify(),
+          //ordenamiento de las pestañas basada en en orden de diseño
+          const home(),
+          const Search(),
+          const Space(),
+          const Notify(),
           Profile(username: widget.data),
         ],
       ),
